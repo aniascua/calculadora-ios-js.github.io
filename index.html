@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0%;
+                margin: 0%;
+            }
+            body{
+                background-color: #85FFBD;
+                background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            div.form{
+                width: 280px;
+                padding: 10px;
+                margin: auto;
+                background-color: black;
+                border-radius: 10px;
+                text-align: center;
+                position: relative;
+                top: 60px;
+            }
+            div.form form input[type="text"]{
+                width: 95%;
+                padding: 10% 3%;
+                background-color: black;
+                border: none;
+                outline: none;
+                text-align: right;
+                color: white;
+                font-size: 4em;
+            }
+            div.form form input[type="button"]{
+                width: 65px;
+                height: 65px;
+                font-size: 1.5em;
+                border-radius: 50%;
+                margin-bottom: 10px;
+            }
+            div.form form input[type="button"].ac{
+                width: 202px;
+                border-top-right-radius: 25px;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                background-color: #9e9e9e;
+            }
+            div.form form input[type="button"].z{
+                width: 130px;
+                border-top-right-radius: 25px;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+            }
+            .or{
+                background-color: #f79013;
+                color: white;
+            }
+            .n{
+                background-color: #333333;
+                color: white;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="form">
+            <form name="mf">
+                <input type="text" name ="result">
+                <input type="button" value="AC" class="ac" onclick="mf.result.value = '' ">
+                <input type="button" value="/" class="or" onclick="mf.result.value += '/'">
+                <input type="button" value="7" class="n" onclick="mf.result.value += '7'">
+                <input type="button" value="8" class="n" onclick="mf.result.value += '8'">
+                <input type="button" value="9" class="n" onclick="mf.result.value += '9'">
+                <input type="button" value="x" class="or" onclick="mf.result.value += '*'">
+                <input type="button" value="4" class="n" onclick="mf.result.value += '4'">
+                <input type="button" value="5" class="n" onclick="mf.result.value += '5'">
+                <input type="button" value="6" class="n" onclick="mf.result.value += '6'">
+                <input type="button" value="-" class="or" onclick="mf.result.value += '-'">
+                <input type="button" value="1" class="n" onclick="mf.result.value += '1'">
+                <input type="button" value="2" class="n" onclick="mf.result.value += '2'">
+                <input type="button" value="3" class="n" onclick="mf.result.value += '3'">
+                <input type="button" value="+" class="or" onclick="mf.result.value += '+'">
+                <input type="button" value="0" class="n z" onclick="mf.result.value += '0'">
+                <input type="button" value="." class="n" onclick="mf.result.value += '.'">
+                <input type="button" value="=" class="or" onclick="mf.result.value = eval(mf.result.value)">
+            </form>
+        </div>
+    </body>
+</html>
